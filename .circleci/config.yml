@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/app
     docker: # use the docker executor type; machine and macos executors are also supported
-      - image: circleci/ruby:2.3.0 # the primary container, where your job's commands are run
+      - image: circleci/ruby:2.4.1 # the primary container, where your job's commands are run
         auth:
           username: $DOCKER_USER
           password: $DOCKER_PASS
