@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/app
+    working_directory: ~/circleci-rails
     docker: # use the docker executor type; machine and macos executors are also supported
       - image: circleci/ruby:2.4.1 # the primary container, where your job's commands are run
         auth:
