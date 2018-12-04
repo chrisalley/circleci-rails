@@ -6,4 +6,4 @@ services:
       - "3000:7000"
     volumes:
       - .:/app
-    command: sh -c "bundle exec rails s -p 3000"
+    command: sh -c "rm -f /app/tmp/pids/puma.pid && rm -f /app/tmp/pids/server.pid && bundle exec rails s -p 3000 -b 0.0.0.0"

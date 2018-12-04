@@ -10,3 +10,8 @@ jobs:
       - checkout # check out the code in the project directory
       - setup_remote_docker
       - run: echo "hello world" # run the `echo` command
+      - run: docker-compose -f docker-compose.ci.yml build app
+      - run: docker-compose -f docker-compose.ci.yml up -d app
+      - run: docker-compose -f docker-compose.ci.yml exec app ls -la
+      - run: docker-compose -f docker-compose.ci.yml exec app bundle
+      - run: docker-compose -f docker-compose.ci.yml down
